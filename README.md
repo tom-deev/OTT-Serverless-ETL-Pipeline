@@ -143,8 +143,8 @@ transformation/transform.py
 
 ## Curated Datasets
 
-Titles: s3://ott-v-pipeline-data/curated/titles/titles.parquet
-Providers: s3://ott-v-pipeline-data/curated/providers/providers.parquet
+Titles: s3://ott-v-pipeline-data/curated/titles/titles.parquet.
+Providers: s3://ott-v-pipeline-data/curated/providers/providers.parquet.
 Providers Region: s3://ott-v-pipeline-data/curated/provider_regions/provider_regions.parquet
 
 ## AWS Glue Data Catalog
@@ -179,7 +179,7 @@ The pipeline successfully processes:
 517 provider-region records
 
 ## Project Structure
-
+```
 ott-streaming-data-pipeline/
 |
 +-- architecture/
@@ -206,9 +206,10 @@ ott-streaming-data-pipeline/
 +-- .gitignore
 +-- README.md
 +-- requirements.txt
+```
 
 ## Project Outcome
-
+```
 Watchmode API
       ↓
 AWS Lambda
@@ -230,3 +231,4 @@ SQL Analytics
 Amazon EventBridge
       ↓
 Daily Lambda Trigger
+```
