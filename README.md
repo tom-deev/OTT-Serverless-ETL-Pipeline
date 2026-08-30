@@ -143,16 +143,30 @@ transformation/transform.py
 
 ## Curated Datasets
 
-Titles: s3://ott-v-pipeline-data/curated/titles/titles.parquet.
-Providers: s3://ott-v-pipeline-data/curated/providers/providers.parquet.
-Providers Region: s3://ott-v-pipeline-data/curated/provider_regions/provider_regions.parquet
+The transformation layer produces three analytics-ready Parquet datasets.
+
+| Dataset | Records | S3 Location |
+|---|---:|---|
+| **Titles** | 50 | `s3://ott-v-pipeline-data/curated/titles/titles.parquet` |
+| **Providers** | 25 | `s3://ott-v-pipeline-data/curated/providers/providers.parquet` |
+| **Provider Regions** | 517 | `s3://ott-v-pipeline-data/curated/provider_regions/provider_regions.parquet` |
+
+### Dataset Purpose
+
+- **Titles** — Movie and TV title metadata including release year, content type, and popularity.
+- **Providers** — Streaming provider metadata such as provider name, type, and application information.
+- **Provider Regions** — Normalized provider-to-region relationships, with one row per provider-region pair.
+
+The curated datasets are stored in **Apache Parquet** format for efficient analytical querying with Amazon Athena.
 
 ## AWS Glue Data Catalog
 
-Database: ott_streaming
-Tables: titles
-        providers
-        provider_regions
+AWS Glue Data Catalog provides the metadata layer for the curated Parquet datasets.
+
+### Database
+
+```text
+ott_streaming
 
 ## Amazon Athena Analytics
 
