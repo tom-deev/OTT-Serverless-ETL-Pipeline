@@ -167,6 +167,7 @@ AWS Glue Data Catalog provides the metadata layer for the curated Parquet datase
 
 ```text
 ott_streaming
+```
 
 ## Amazon Athena Analytics
 
